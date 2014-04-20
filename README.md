@@ -27,6 +27,22 @@ Assuming that `I18n.available_locales` is set to `[:en, :fr, :nl]`, it will make
   * `account_confirmation_fr`
   * `account_confirmation_nl`
 
+If you want direct access to the current locale in your mailer preview method, you may add a parameter to your method signature and the locale will be passed on:
+
+```ruby
+require 'action_mailer/localized_preview'
+
+class NotifierPreview < ActionMailer::Preview
+  include ActionMailer::LocalizedPreview
+
+  def account_confirmation(locale)
+    account = Account.new(name: "Cosmo Kramer", prefered_language: locale)
+    Notifier.account_confirmation(account)
+  end
+
+end
+
+```
 
 ### Caveats
 
