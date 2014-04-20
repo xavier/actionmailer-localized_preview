@@ -2,10 +2,7 @@ require "action_mailer/localized_preview/version"
 
 module ActionMailer
   module LocalizedPreview
-
-    def self.included(base)
-      base.extend(ClassMethods)
-    end
+    extend ActiveSupport::Concern
 
     module ClassMethods
 
