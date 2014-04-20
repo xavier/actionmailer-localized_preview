@@ -25,7 +25,7 @@ module ActionMailer
       method_name, locale = $1, $2.to_sym
       current_locale = I18n.locale
       begin
-        I18n.locale = $2
+        I18n.locale = locale
         case self.method(method_name).arity
         when 0
           public_send(method_name)
