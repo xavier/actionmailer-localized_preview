@@ -7,6 +7,7 @@ This gem extends [ActionMailer::Preview](http://api.rubyonrails.org/classes/Acti
 Simply include `ActionMailer::LocalizedPreview` in your preview class
 
 ```ruby
+require 'action_mailer/localized_preview'
 
 class NotifierPreview < ActionMailer::Preview
   include ActionMailer::LocalizedPreview
