@@ -31,7 +31,7 @@ Assuming that `I18n.available_locales` is set to `[:en, :fr, :nl]`, it will make
 ### Caveats
 
 * This was built for **Rails 4.1 onwards** and **wont work** with the [mail_view](https://github.com/basecamp/mail_view) gem which is the ancestor of the mailer preview feature but sports a different API
-* It hasn't been tested (and probably does not support) *yet* locales in with a regional setting (e.g. "en-US", "en-GB", ...)
+* It hasn't been tested with locales containing a regional setting (e.g. `en-US`, `en-GB`, ...) and these are most probably not supported at this point.
 
 ## Installation
 
